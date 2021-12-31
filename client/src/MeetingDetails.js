@@ -23,11 +23,7 @@ const MeetingDetails = () => {
       };
 
       const body = JSON.stringify({ id: params.id });
-      const res = await axios.post(
-        `http://localhost:5000/meeting_logs`,
-        body,
-        config
-      );
+      const res = await axios.post(`/meeting_logs`, body, config);
 
       setDetails(res.data);
     };
@@ -45,11 +41,7 @@ const MeetingDetails = () => {
       };
 
       const body = JSON.stringify({ id: params.id });
-      const res = await axios.post(
-        `http://localhost:5000/attendence/`,
-        body,
-        config
-      );
+      const res = await axios.post(`/attendence/`, body, config);
 
       const data = res.data;
       await exportFromJSON({ data, fileName, exportType });

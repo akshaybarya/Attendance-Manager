@@ -20,11 +20,7 @@ const Subjects = () => {
         };
 
         const body = JSON.stringify({ user: localStorage.getItem("user") });
-        const res = await axios.post(
-          `http://localhost:5000/subjects`,
-          body,
-          config
-        );
+        const res = await axios.post(`/subjects`, body, config);
         setDetails(res.data);
 
         setLoading(false);

@@ -35,11 +35,7 @@ const Register = () => {
         email,
         password,
       });
-      const res = await axios.post(
-        `http://localhost:5000/register`,
-        body,
-        config
-      );
+      const res = await axios.post(`/register`, body, config);
 
       setMessage(res.data);
     } catch (error) {

@@ -24,11 +24,7 @@ const SubjectDetails = () => {
           user: localStorage.getItem("user"),
           subject: params.id,
         });
-        const res = await axios.post(
-          `http://localhost:5000/subject`,
-          body,
-          config
-        );
+        const res = await axios.post(`/subject`, body, config);
         setDetails(res.data[0].meetings);
 
         setLoading(false);

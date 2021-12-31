@@ -17,7 +17,7 @@ const Online = () => {
           },
         };
 
-        const res = await axios.post(`http://localhost:5000/`, {}, config);
+        const res = await axios.post(`/`, {}, config);
         localStorage.setItem("user", res.data.email);
         localStorage.setItem("isAdmin", res.data.isAdmin);
         localStorage.setItem("name", res.data.name);

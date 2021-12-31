@@ -32,7 +32,7 @@ const Login = () => {
         email,
         password,
       });
-      const res = await axios.post(`http://localhost:5000/login`, body, config);
+      const res = await axios.post(`/login`, body, config);
 
       localStorage.setItem("token", res.data.token);
 

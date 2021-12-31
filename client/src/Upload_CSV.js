@@ -13,7 +13,7 @@ const Upload_CSV = () => {
 
       // Request made to the backend api
       // Send formData object
-      const res = await axios.post(`http://localhost:5000/add-csv`, formData);
+      const res = await axios.post(`/add-csv`, formData);
 
       alert(res.data);
     } catch (error) {

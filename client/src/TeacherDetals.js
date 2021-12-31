@@ -21,19 +21,14 @@ const TeacherDetals = () => {
         };
 
         const body = JSON.stringify({ id: params.id });
-        const res = await axios.post(
-          `http://localhost:5000/teacher_logs`,
-          body,
-          config
-        );
+        const res = await axios.post(`/teacher_logs`, body, config);
         setDetails(res.data.class);
-
-        setLoading(false);
       } catch (error) {
         setErr(error);
       }
     };
     f();
+    setLoading(false);
   }, []);
 
   if (loading) {

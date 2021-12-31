@@ -17,10 +17,7 @@ const FacultyHome = () => {
             "x-auth-token": localStorage.getItem("token"),
           },
         };
-        const res = await axios.get(
-          `http://localhost:5000/category_logs`,
-          config
-        );
+        const res = await axios.get(`/category_logs`, config);
         setLogs(res.data);
 
         //console.log(res.data);
